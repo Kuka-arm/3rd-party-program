@@ -16,7 +16,7 @@ namespace Team_7_KUKA_arm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
+            Application.Run(new frmMain());
         }
     }
 }
