@@ -16,5 +16,15 @@ namespace Team_7_KUKA_arm
         {
             InitializeComponent();
         }
+
+        private void btnImport_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
