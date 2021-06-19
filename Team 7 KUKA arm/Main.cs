@@ -85,10 +85,10 @@ namespace Team_7_KUKA_arm
             Color newColor3 = picture.GetPixel(200, 400);
             Color newColor4 = picture.GetPixel(400, 400);
 
-            c1_input.BackColor = newColor1;
-            c2_input.BackColor = newColor2;
-            c3_input.BackColor = newColor3;
-            c4_input.BackColor = newColor4;
+            c1_input.BackColor = color.Colors[color.FindNearestColor(color.Colors, newColor1)];
+            c2_input.BackColor = color.Colors[color.FindNearestColor(color.Colors, newColor2)];
+            c3_input.BackColor = color.Colors[color.FindNearestColor(color.Colors, newColor3)];
+            c4_input.BackColor = color.Colors[color.FindNearestColor(color.Colors, newColor4)];
         }
     }
 }
