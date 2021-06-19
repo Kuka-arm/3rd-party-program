@@ -75,5 +75,20 @@ namespace Team_7_KUKA_arm
 
             c4_output.BackColor = color.PickColor(colors[3]);
         }
+
+        private void btnSort_Click(object sender, EventArgs e)
+        {
+            Bitmap picture = new Bitmap(pictureBox1.ImageLocation);
+
+            Color newColor1 = picture.GetPixel(200,200);
+            Color newColor2 = picture.GetPixel(400, 200);
+            Color newColor3 = picture.GetPixel(200, 400);
+            Color newColor4 = picture.GetPixel(400, 400);
+
+            c1_input.BackColor = newColor1;
+            c2_input.BackColor = newColor2;
+            c3_input.BackColor = newColor3;
+            c4_input.BackColor = newColor4;
+        }
     }
 }

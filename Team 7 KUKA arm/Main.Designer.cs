@@ -41,7 +41,7 @@
             this.c2_output = new System.Windows.Forms.Panel();
             this.c3_output = new System.Windows.Forms.Panel();
             this.btnImport = new System.Windows.Forms.Button();
-            this.btnSort = new System.Windows.Forms.Button();
+            this.btnDetect = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -49,9 +49,11 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.ImageLocation = "C:/Users/Gardener/Pictures/sample pic.png";
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(441, 386);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -167,21 +169,22 @@
             this.btnImport.Text = "Import";
             this.btnImport.UseVisualStyleBackColor = true;
             // 
-            // btnSort
+            // btnDetect
             // 
-            this.btnSort.Location = new System.Drawing.Point(459, 409);
-            this.btnSort.Name = "btnSort";
-            this.btnSort.Size = new System.Drawing.Size(145, 23);
-            this.btnSort.TabIndex = 5;
-            this.btnSort.Text = "Sort";
-            this.btnSort.UseVisualStyleBackColor = true;
+            this.btnDetect.Location = new System.Drawing.Point(459, 409);
+            this.btnDetect.Name = "btnDetect";
+            this.btnDetect.Size = new System.Drawing.Size(145, 23);
+            this.btnDetect.TabIndex = 5;
+            this.btnDetect.Text = "Detect";
+            this.btnDetect.UseVisualStyleBackColor = true;
+            this.btnDetect.Click += new System.EventHandler(this.btnSort_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(844, 444);
-            this.Controls.Add(this.btnSort);
+            this.Controls.Add(this.btnDetect);
             this.Controls.Add(this.btnImport);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -204,7 +207,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnImport;
-        private System.Windows.Forms.Button btnSort;
+        private System.Windows.Forms.Button btnDetect;
         private System.Windows.Forms.Panel c4_input;
         private System.Windows.Forms.Panel c1_input;
         private System.Windows.Forms.Panel c2_input;
