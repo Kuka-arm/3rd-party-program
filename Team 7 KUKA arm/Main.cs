@@ -19,7 +19,15 @@ namespace Team_7_KUKA_arm
 
         private void btnImport_Click(object sender, EventArgs e)
         {
-
+            // open file dialog   
+            OpenFileDialog open = new OpenFileDialog();
+            // image filters  
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                // display image in picture box  
+                pictureBox1.Image = new Bitmap(open.FileName);
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
