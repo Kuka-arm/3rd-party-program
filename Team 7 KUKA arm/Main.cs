@@ -13,7 +13,7 @@ namespace Team_7_KUKA_arm
     public partial class frmMain : Form
     {
         color_picker color = new color_picker();
-        int[] colors = { -1, 1, 2, 3 }; // Index of output colors
+        int[] colors = { -1, 0, 1, 2 }; // Index of output colors
 
         public frmMain()
         {
