@@ -49,7 +49,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.ImageLocation = "C:/Users/Gardener/Pictures/sample pic.png";
+            this.pictureBox1.ImageLocation = "";
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(441, 386);
@@ -168,6 +168,7 @@
             this.btnImport.TabIndex = 4;
             this.btnImport.Text = "Import";
             this.btnImport.UseVisualStyleBackColor = true;
+            this.btnImport.Click += new System.EventHandler(this.btnImport_Click_1);
             // 
             // btnDetect
             // 
