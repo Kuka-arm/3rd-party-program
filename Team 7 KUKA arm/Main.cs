@@ -15,6 +15,8 @@ namespace Team_7_KUKA_arm
         color_picker color = new color_picker();
         int[] colors = { -1, 0, 1, 2 }; // Index of output colors
 
+        Sorting sorting = new Sorting();
+
         public frmMain()
         {
             InitializeComponent();
@@ -106,12 +108,33 @@ namespace Team_7_KUKA_arm
             // open file dialog   
             OpenFileDialog open = new OpenFileDialog();
             // image filters  
-            open.Filter = "Image Files(*.png; *.jpg; *.jpeg; *.gif; *.bmp)|*.png; *.jpg; *.jpeg; *.gif; *.bmp";
+            open.Filter = "Image Files(*.png; *.jpg; *.jpeg; *.bmp)|*.png; *.jpg; *.jpeg; *.bmp";
             if (open.ShowDialog() == DialogResult.OK)
             {
                 // display image in picture box  
                 pictureBox1.Image = new Bitmap(open.FileName);
             }
+        }
+
+        private void btnSort_Click_1(object sender, EventArgs e)
+        {
+            Color[] inputColors = { c1_input.BackColor, c2_input.BackColor, c3_input.BackColor, c4_input.BackColor };
+            Color[] outputColors = { c1_output.BackColor, c2_output.BackColor, c3_output.BackColor, c4_output.BackColor };
+
+            string[] scripts = new string[4];
+
+            for (int i = 0; i < 4; i++) // For each one of the inputs
+            {
+                for (int j = 0; j < 4; j++) // For testing each output
+                {
+                    if (inputColors[i] == outputColors[j])
+                    {
+                        scripts[i] = sorting.Inputs[i] + " to " + sorting.Outputs[j];
+                    }
+                }
+            }
+
+            MessageBox.Show(scripts[0] + ", " + scripts[1] + ", " + scripts[2] + ", " + scripts[3]);
         }
     }
 }
