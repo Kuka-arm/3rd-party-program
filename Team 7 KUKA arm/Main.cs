@@ -82,10 +82,10 @@ namespace Team_7_KUKA_arm
         {
             Bitmap picture = new Bitmap(pictureBox1.Image);
 
-            Color newColor1 = picture.GetPixel(200,200);
-            Color newColor2 = picture.GetPixel(400, 200);
-            Color newColor3 = picture.GetPixel(200, 400);
-            Color newColor4 = picture.GetPixel(400, 400);
+            Color newColor1 = picture.GetPixel((picture.Width / 8), picture.Height/2);
+            Color newColor2 = picture.GetPixel((picture.Width / 8) * 3, picture.Height / 2);
+            Color newColor3 = picture.GetPixel((picture.Width / 8) * 5, picture.Height / 2);
+            Color newColor4 = picture.GetPixel((picture.Width / 8) * 7, picture.Height / 2);
 
             c1_input.BackColor = color.Colors[color.FindNearestColor(color.Colors, newColor1)];
             c2_input.BackColor = color.Colors[color.FindNearestColor(color.Colors, newColor2)];
