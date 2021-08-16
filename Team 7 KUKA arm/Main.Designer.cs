@@ -43,6 +43,7 @@
             this.btnImport = new System.Windows.Forms.Button();
             this.btnDetect = new System.Windows.Forms.Button();
             this.btnSort = new System.Windows.Forms.Button();
+            this.btnComports = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -191,11 +192,22 @@
             this.btnSort.UseVisualStyleBackColor = true;
             this.btnSort.Click += new System.EventHandler(this.btnSort_Click_1);
             // 
+            // btnComports
+            // 
+            this.btnComports.Location = new System.Drawing.Point(157, 409);
+            this.btnComports.Name = "btnComports";
+            this.btnComports.Size = new System.Drawing.Size(145, 23);
+            this.btnComports.TabIndex = 7;
+            this.btnComports.Text = "Comports";
+            this.btnComports.UseVisualStyleBackColor = true;
+            this.btnComports.Click += new System.EventHandler(this.btnComports_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(844, 444);
+            this.Controls.Add(this.btnComports);
             this.Controls.Add(this.btnSort);
             this.Controls.Add(this.btnDetect);
             this.Controls.Add(this.btnImport);
@@ -230,6 +242,7 @@
         private System.Windows.Forms.Panel c2_output;
         private System.Windows.Forms.Panel c3_output;
         private System.Windows.Forms.Button btnSort;
+        private System.Windows.Forms.Button btnComports;
     }
 }
 

@@ -48,6 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="color_picker.cs" />
+    <Compile Include="Comports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Comports.Designer.cs">
+      <DependentUpon>Comports.cs</DependentUpon>
+    </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,6 +63,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sorting.cs" />
+    <EmbeddedResource Include="Comports.resx">
+      <DependentUpon>Comports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>

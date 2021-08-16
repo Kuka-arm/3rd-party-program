@@ -136,5 +136,11 @@ namespace Team_7_KUKA_arm
 
             MessageBox.Show(scripts[0] + ", " + scripts[1] + ", " + scripts[2] + ", " + scripts[3]);
         }
+
+        private void btnComports_Click(object sender, EventArgs e)
+        {
+            Comports form = new Comports();
+            form.Show();
+        }
     }
 }
